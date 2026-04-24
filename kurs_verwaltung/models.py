@@ -33,5 +33,5 @@ class Kursbeschreibung(models.Model):
 
 class Studentenausweis(models.Model):
     ausweis_nummer = models.CharField(max_length=20, unique=True)
-    #student = models.OneToOneField(Student, on_delete=models.CASCADE)
-    student_matrikel_nummer = models.ForeignKey(Student, to_field='matrikel_nummer', on_delete=models.CASCADE, unique=True, related_name='studentenausweise', related_query_name='studentenausweis')
+    student = models.OneToOneField(Student, on_delete=models.CASCADE)
+    #student_matrikel_nummer = models.ForeignKey(Student, to_field='matrikel_nummer', on_delete=models.CASCADE, unique=True, related_name='studentenausweise', related_query_name='studentenausweis')

@@ -1,3 +1,13 @@
 asgiref==3.11.1
+astroid==4.0.4
+dill==0.4.1
 Django==6.0.4
+django-extensions==4.1
+isort==8.0.1
+mccabe==0.7.0
+platformdirs==4.9.6
+pydot==4.0.1
+pylint==4.0.5
+pyparsing==3.3.2
 sqlparse==0.5.5
+tomlkit==0.14.0
