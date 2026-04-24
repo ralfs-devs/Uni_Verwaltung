@@ -24,7 +24,7 @@ class Student(models.Model):
     matrikel_nummer = models.CharField(max_length=20, unique=True)
     last_name = models.CharField(max_length=100)
     first_name = models.CharField(max_length=100)
-    kurs = models.ManyToManyField(Kurs, related_name='studenten') #ein Student kann mehrere Kurse belegen und ein Kurs kann von mehreren Studenten belegt werden. Die Beziehung wird über eine ManyToManyField definiert.
+    kurs = models.ManyToManyField(Kurs, related_name='students', related_query_name='student') #ein Student kann mehrere Kurse belegen und ein Kurs kann von mehreren Studenten belegt werden. Die Beziehung wird über eine ManyToManyField definiert.
 
 class Kursbeschreibung(models.Model):
     kurs = models.OneToOneField(Kurs, on_delete=models.CASCADE)
